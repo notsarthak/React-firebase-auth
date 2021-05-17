@@ -22,6 +22,7 @@ export default function Dashboard() {
           //the app crashes, by the time history.push('/login') runs 
           //to get over this, we make it impossible for the dashboard component to be rendered when currentUser is 'null' i.e. user is logged out, by creating a private route component
           //this way when authcontextprovider re-renders along with all its children and goes on to render the dashboard component, it can't beacse private route component prevents it
+          //so history.push('/login') isn't even executed
       } catch {
           setError("Failed to log out");
       }
